@@ -558,7 +558,7 @@ animation-delay: 1.6s;
 
 .cs-text-block {
     font-family: "Helvetica";
-    font-weight: 200;
+    font-weight: 300;
     line-height: 22px;
 }
 
@@ -589,7 +589,7 @@ animation-delay: 1.6s;
 
 .two-columns .text {
     font-family: "Helvetica";
-    font-weight: 200;
+    font-weight: 300;
     line-height: 22px;
 }
 
@@ -608,7 +608,7 @@ animation-delay: 1.6s;
 
 .list ul {
     font-family: "Helvetica";
-    font-weight: 200;
+    font-weight: 300;
     line-height: 22px;
     list-style: square;
 }
