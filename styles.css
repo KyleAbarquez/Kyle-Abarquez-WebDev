@@ -1,0 +1,802 @@
+* {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+}
+
+nav {
+    padding: .5px;
+    margin-bottom: 5em;
+    font-family: "Helvetica";
+}
+
+.logo {
+    float: left;
+    padding: 8px;
+/*    margin-left: 16px;*/
+    margin-top: 7px;
+    font-family: "courier";
+    letter-spacing: 1.5px;
+    animation: .75s ease-out  slideInFromLeft;
+}
+
+.logo a {
+    color: #000;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+nav ul {
+    float: right;
+    animation: .75s ease-out  slideInFromRight;
+}
+
+nav ul li {
+    display: inline-block;
+    float: left;
+}
+
+nav ul li a:hover,
+.logo a:hover{
+    transform: scale(1.1);
+}
+
+nav ul li:not(:first-child) {
+    margin-left: 48px;
+}
+
+nav ul li:last-child {
+    margin-right: 24px;
+}
+
+nav ul li a {
+    display: inline-block;
+    outline: none;
+    color: #000;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 14px;
+    letter-spacing: 1.2px;
+    font-weight: 600;
+    transition: all .2s ease;
+}
+
+@media screen and (max-width: 864px) {
+    
+    .logo {
+        padding: 0;
+        margin-top: 16px;
+    }
+    
+    .nav-wrapper {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        background: #fff;
+        opacity: 0;
+        transition: all 0.2s ease;
+    }
+    
+    .nav-wrapper ul {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 100%;
+    }
+    
+    .nav-wrapper ul li {
+        display: block;
+        float: none;
+        width: 100%;
+        text-align: right;
+        margin-bottom: 10px;
+    }
+    
+    .nav-wrapper ul li:nth-child(1) a {
+        transition-delay: 0.2s;
+    }
+    .nav-wrapper ul li:nth-child(2) a {
+        transition-delay: 0.3s;
+    }
+    .nav-wrapper ul li:nth-child(3) a {
+        transition-delay: 0.4s;
+    }
+    
+    
+    .nav-wrapper ul li:not(:first-child) {
+        margin-left: 0;
+    }
+    
+    .nav-wrapper ul li a {
+        padding: 10px 24px;
+        opacity: 0;
+        color: #000;
+        font-size: 14px;
+        font-weight: 600;
+        letter-spacing: 1.2px;
+        transform: translateX(-20px);
+        transition: all 0.2s ease;
+    }
+    
+    .nav-btn {
+        position: fixed;
+        right: 10px;
+        top: 10px;
+        display: block;
+        width: 48px;
+        height: 48px;
+        cursor: pointer;
+        z-index: 9999;
+        border-radius: 50%;
+    }
+    
+    .nav-btn i {
+        display: block;
+        width: 20px;
+        height: 2px;
+        background: #000;
+        border-radius: 2px;
+        margin-left: 14px;
+    }
+    
+    .nav-btn i:nth-child(1) {
+        margin-top: 16px;
+    }
+    
+    .nav-btn i:nth-child(2) {
+        margin-top: 4px;
+        opacity: 1;
+    }
+    
+    .nav-btn i:nth-child(3) {
+        margin-top: 4px;
+    }
+    
+    
+}
+
+#nav:checked + .nav-btn {
+    transform: rotate(45deg);
+}
+
+#nav:checked + .nav-btn i {
+    background: #000;
+    transition: transform 0.2s ease;
+}
+
+#nav:checked + .nav-btn i:nth-child(1) {
+    transform: translateY(6px) rotate(180deg);
+}
+#nav:checked + .nav-btn i:nth-child(2) {
+    opacity: 0;
+}
+#nav:checked + .nav-btn i:nth-child(3) {
+    transform: translateY(-6px) rotate(90deg);
+}
+
+#nav:checked ~ .nav-wrapper {
+    z-index: 9990;
+    opacity: 1;
+}
+
+#nav:checked ~ .nav-wrapper ul li a {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.hidden {
+    display: none;
+}
+
+.body-wrap {
+/*    border: solid red;*/
+    width: 95%;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.intro {
+/*    border: solid blue;*/
+    margin: 0 auto;
+}
+
+#headline-dt {
+    display: none;
+}
+
+.intro-copy {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+}
+
+.intro-copy h1 {
+    font-family: "Helvetica", sans-serif;
+    font-weight: 600;
+    font-size: 34px;
+    text-transform: uppercase;
+}
+
+#me-pic {
+    display: none;
+}
+
+.description {
+    font-family: "Helvetica";
+    font-weight: 200;
+    line-height: 24px;
+}
+
+.p2 {
+    margin-top: 1em;
+}
+
+.intro-pic {
+    display: none;
+}
+
+.projects {
+    margin-top: 3em;
+}
+
+.project-card {
+    font-family: "Helvetica";
+    background-color: #EFEFEF;
+    padding: 1em;
+    margin-top: 1.5em;
+    transition: all .2s ease;
+}
+
+.project-card:hover {
+    transform: scale(1.03);
+    cursor: pointer;
+}
+
+.project-description h4 {
+    font-weight: 200;
+    line-height: 24px;
+}
+
+.project-img {
+    text-align: center;
+}
+
+.project-card img {
+    max-width: 350px;
+    width: 98%;
+}
+
+.project-description h3 {
+    font-size: 21px;
+    font-family: "courier";
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+#ikea {
+    background-color: #e0e0e0;
+}
+
+#mega {
+    background-color: #363636;
+}
+
+#ffd {
+    background-color: #d9f4df;
+}
+
+#mega .project-description{
+    color: #FFF;
+}
+
+#mega .project-description h4{
+    color: #d6d6d6;
+}
+
+    .contact-header {
+        font-family: "courier";
+        font-size: 23px;
+        margin-top: 3em;
+        font-weight: 600;
+    }
+
+    .contact-me {
+        font-family: "courier";
+        margin-top: 3em;
+        margin-bottom: 3em;
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    
+    #contact-form {
+        width: 100%;
+        margin-top: 1.5em;
+    }
+
+    #contact-form label {
+        display: block;
+        margin-bottom: 8px;
+    }
+
+    #contact-form input {
+        display: block;
+        margin-bottom: 12px;
+        width: 100%;
+        outline: none;
+        line-height: 27px;
+        font-size: 17px;
+        padding: 8px;
+        border: 0;
+        border-bottom: solid 1px #d8d8d8;
+    }
+
+    .c-input {
+        
+        background-color: #fff;
+    }
+
+    #contact-form textarea {
+        width: 100%;
+        box-shadow: none;
+        background-color: #fff;
+        margin-bottom: 1em;
+        font-size: 17px;
+        padding: 8px;
+        border: solid 1px #d8d8d8;
+    }
+
+    #submitBtn {
+        background-color: #000;
+        border: none;
+        color: #fff;
+        cursor: pointer;
+        transition: all 200ms ease-in-out;
+        letter-spacing: 2px;
+    }
+    
+    .contact-2 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        display: none;
+    }
+    
+    .contact-2 h1 {
+        margin-left: -147px;
+        font-weight: 300;
+    }
+    
+    .contact-2 ul {
+        padding: 0;
+        
+    }
+    
+    .contact-2 ul li {
+        list-style: none;
+        margin: 0;
+        margin-top: 1em;
+        padding: 0;
+    }
+
+.footer {
+    height: 120px;
+    border-top: solid lightgrey 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer ul {
+    margin: 0;
+    padding: 0;
+    width: 150px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer ul li {
+    display: inline-block;
+    
+}
+
+.footer ul li i {
+    font-size: 1.8em;
+}
+
+/* make keyframes that tell the start state and the end state of our object */
+ 
+@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+ 
+.fade-in {
+ opacity:0;  /* make things invisible upon start */
+ -webkit-animation:fadeIn ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+ -moz-animation:fadeIn ease-in 1;
+ animation:fadeIn ease-in 1;
+ 
+ -webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+ -moz-animation-fill-mode:forwards;
+ animation-fill-mode:forwards;
+ 
+ -webkit-animation-duration:1s;
+ -moz-animation-duration:1s;
+ animation-duration:1s;
+}
+ 
+.fade-in.one {
+-webkit-animation-delay: 0.7s;
+-moz-animation-delay: 0.7s;
+animation-delay: 0.7s;
+}
+ 
+.fade-in.two {
+-webkit-animation-delay: 1.2s;
+-moz-animation-delay:1.2s;
+animation-delay: 1.2s;
+}
+ 
+.fade-in.three {
+-webkit-animation-delay: 1.6s;
+-moz-animation-delay: 1.6s;
+animation-delay: 1.6s;
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/******** CASE STUDY STYLES ********/
+
+.mb-xxl {
+    margin-bottom: 75px;
+}
+
+.mb-xl {
+    margin-bottom: 48px;
+}
+
+.mt-xl {
+    margin-top: 48px;
+}
+
+.mb-l {
+    margin-bottom: 36px;
+}
+
+.mt-l {
+    margin-top: 36px;
+}
+
+.mb-m {
+    margin-bottom: 24px;
+}
+
+.mt-m {
+    margin-top: 24px;
+}
+
+.mb-s {
+    margin-bottom: 12px;
+}
+
+.mt-s {
+    margin-top: 12px;
+}
+
+.cs-wrap {
+/*    border: solid red;*/
+    width: 98%;
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+.cs-title {
+    margin-bottom: 1.5em;
+}
+
+.cs-wrap h1 {
+    font-family: "Helvetica";
+    margin: 0;
+    margin-bottom: 2px;
+}
+
+.cs-wrap h4 {
+    font-family: "courier";
+    font-size: 20px;
+    font-weight: 100;
+    margin: 0;
+    color: #999;
+}
+
+
+.display-img {
+    width: 100%;
+}
+
+.cs-section-title {
+    font-family: "Helvetica";
+    font-size: 22px;
+    font-weight: 800;
+}
+
+.cs-text-block {
+    font-family: "Helvetica";
+    font-weight: 100;
+    line-height: 22px;
+}
+
+.cs-text-block span {
+    font-weight: 800;
+}
+
+.quote {
+    text-align: center;
+    font-family: "courier";
+    font-size: 18px;
+}
+
+.two-columns {
+    
+}
+
+.img-n-cap img{
+    width: 100%;
+}
+
+.img-n-cap p {
+    margin: 0;
+    font-family: "courier";
+    color: #999;
+    letter-spacing: -1px;
+}
+
+.two-columns .text {
+    font-family: "Helvetica";
+    font-weight: 100;
+    line-height: 22px;
+}
+
+.cs-img {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.img-wrap {
+    text-align: center;
+}
+
+#flowchart {
+    max-width: 700px;
+}
+
+.list ul {
+    font-family: "Helvetica";
+    font-weight: 100;
+    line-height: 22px;
+    list-style: square;
+}
+
+.back-to-top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    font-family: "Helvetica";
+    background: #000;
+    color: #fff;
+    letter-spacing: 1px;
+}
+
+
+@media (min-width: 800px) {
+    
+    .two-columns {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 2em;
+    }
+    
+    .img-n-cap p {
+        margin-top: 8px;
+    }
+}
+
+/******** END CASE STUDY STYLES ********/
+
+
+@media (min-width: 850px) {
+    
+    nav {
+        margin-bottom: 10em;
+    }
+    
+    .intro {
+        display: flex;
+        justify-content: space-between;
+        height: 450px;
+/*        border: solid red;*/
+    }
+    
+    .intro-copy {
+/*        border: solid red;*/
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 100%;
+        
+    }
+    
+    #headline-m {
+        display: none;
+    }
+    
+    #headline-dt {
+        display: block;
+    }
+    
+    .intro-copy h1 {
+        font-size: 48px;
+        line-height: 58px;
+        margin-right: 1em;
+        margin-top: em;
+    }
+    
+    .description {
+        align-self: center;
+        font-size: 18px;
+        display: flex;
+        align-items: center;
+        justify-content: center;;
+        width: 100%;
+        margin-top: 1em;
+    }
+    
+    #me-pic {
+        display: block;
+        max-width: 300px;
+        margin-right: 3em;
+        border-radius: 100%;
+    }
+    
+    .me-copy {
+        max-width: 500px;
+    }
+    
+    .p2 {
+        margin-top: 1em;
+    }
+    
+    .projects {
+        margin-top: 12em;
+    }
+    
+    .project-card {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 400px;
+    }
+    
+    .project-description {
+        max-width: 400px;
+        margin-right: 1.5em;
+    }
+    
+    .contact-header {
+        font-size: 33px;
+    }
+    
+    .contact-me {
+        font-family: "courier";
+        margin-top: 3em;
+        margin-bottom: 3em;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    #contact-form {
+        width: 100%;
+        margin-top: 1.5em;
+    }
+
+    #contact-form label {
+        display: block;
+        margin-bottom: 8px;
+    }
+
+    #contact-form input {
+        display: block;
+        margin-bottom: 12px;
+        width: 100%;
+        outline: none;
+        line-height: 27px;
+        font-size: 17px;
+        padding: 8px;
+        border: 0;
+        border-bottom: solid 1px #d8d8d8;
+    }
+
+    .c-input {
+        
+        background-color: #fff;
+    }
+
+    #contact-form textarea {
+        width: 100%;
+        box-shadow: none;
+        background-color: #fff;
+        margin-bottom: 1em;
+        font-size: 17px;
+        padding: 8px;
+        border: solid 1px #d8d8d8;
+    }
+
+    #submitBtn {
+        background-color: #000;
+        border: none;
+        color: #fff;
+        cursor: pointer;
+        transition: all 200ms ease-in-out;
+        letter-spacing: 2px;
+    }
+    
+    .contact-2 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .contact-2 h1 {
+        margin-left: -147px;
+        font-weight: 300;
+    }
+    
+    .contact-2 ul {
+        padding: 0;
+        
+    }
+    
+    .contact-2 ul li {
+        list-style: none;
+        margin: 0;
+        margin-top: 1em;
+        padding: 0;
+    }
+}
