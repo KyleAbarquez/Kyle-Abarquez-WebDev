@@ -520,6 +520,11 @@ animation-delay: 1.6s;
     margin-top: 12px;
 }
 
+.invision-link a {
+    text-decoration: underline;
+    font-weight: 500;
+}
+
 .cs-wrap {
 /*    border: solid red;*/
     width: 98%;
