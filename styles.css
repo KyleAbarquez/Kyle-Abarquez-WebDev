@@ -233,7 +233,9 @@ nav ul li a {
 }
 
 #me-pic {
-    display: none;
+/*    display: none;*/
+    width: 100%;
+    margin-bottom: 1em;
 }
 
 .description {
@@ -662,6 +664,28 @@ animation-delay: 1.6s;
 
 /******** END CASE STUDY STYLES ********/
 
+@media (min-width: 675px) {
+        .description {
+        align-self: center;
+        font-size: 18px;
+        display: flex;
+        align-items: center;
+        justify-content: center;;
+        width: 100%;
+        margin-top: 1em;
+    }
+    
+    #me-pic {
+        display: block;
+        max-width: 300px;
+        margin-right: 3em;
+        border-radius: 100%;
+    }
+    
+    .me-copy {
+        max-width: 500px;
+    }
+}
 
 @media (min-width: 850px) {
     
@@ -700,26 +724,7 @@ animation-delay: 1.6s;
         margin-top: em;
     }
     
-    .description {
-        align-self: center;
-        font-size: 18px;
-        display: flex;
-        align-items: center;
-        justify-content: center;;
-        width: 100%;
-        margin-top: 1em;
-    }
-    
-    #me-pic {
-        display: block;
-        max-width: 300px;
-        margin-right: 3em;
-        border-radius: 100%;
-    }
-    
-    .me-copy {
-        max-width: 500px;
-    }
+
     
     .p2 {
         margin-top: 1em;
