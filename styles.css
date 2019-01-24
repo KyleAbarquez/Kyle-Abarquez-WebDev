@@ -256,12 +256,27 @@ nav ul li a {
     margin-top: 3em;
 }
 
+
+
+.p-section-title {
+    font-family: "Helvetica";
+    font-weight: bold;
+    font-size: 48px;
+    padding: 0;
+    margin: 0;
+    color: #ddd;
+    margin-bottom: -22px;
+}
+
 .project-card {
     font-family: "Helvetica";
     background-color: #EFEFEF;
     padding: 1em;
-    margin-top: 1.5em;
+    margin-top: 1em;
     transition: all .2s ease;
+}
+
+.project-card:first-child {
 }
 
 .project-card:hover {
@@ -299,6 +314,21 @@ nav ul li a {
 
 #mega {
     background-color: #363636;
+}
+
+#jscalc {
+    background-color: #000;
+    color: #FFF;
+}
+
+#c4 {
+    background-color: #303853;
+    color: #FFF;
+}
+
+#dd {
+    background-color: #afafaf;
+    color: #fff;
 }
 
 #ffd {
@@ -724,14 +754,16 @@ animation-delay: 1.6s;
         margin-top: em;
     }
     
-
-    
     .p2 {
         margin-top: 1em;
     }
     
     .projects {
         margin-top: 12em;
+    }
+    
+    #dev-section {
+        margin-top: 6em;
     }
     
     .project-card {
