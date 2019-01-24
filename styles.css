@@ -236,6 +236,7 @@ nav ul li a {
 /*    display: none;*/
     width: 100%;
     margin-bottom: 1em;
+    border-radius: 100%;
 }
 
 .description {
