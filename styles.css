@@ -210,9 +210,23 @@ nav ul li a {
     max-width: 1200px;
 }
 
+#main-title {
+    text-align: center;
+    font-family: arial;
+    line-height: 2em;
+    font-size: 36px;
+    font-weight: 800;
+    background: -webkit-linear-gradient(#f142f4, #7cf1ec);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+
 .intro {
 /*    border: solid blue;*/
     margin: 0 auto;
+    margin-top: 3em;
 }
 
 #headline-dt {
@@ -330,7 +344,12 @@ nav ul li a {
 #dd {
     background-color: #afafaf;
     color: #fff;
+    min-height: 500px;
 }
+
+#dd .project-img{
+        margin-top: 3.5em;
+    }
 
 #ffd {
     background-color: #ffca70;
@@ -345,7 +364,7 @@ nav ul li a {
 }
 
     .contact-header {
-        font-family: "courier";
+        font-family: arial;
         font-size: 23px;
         margin-top: 3em;
         font-weight: 600;
@@ -719,6 +738,10 @@ animation-delay: 1.6s;
 }
 
 @media (min-width: 850px) {
+    
+    #dd .project-img{
+        margin-top: 0em;
+    }
     
     nav {
         margin-bottom: 10em;
