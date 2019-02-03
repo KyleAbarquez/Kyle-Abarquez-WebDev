@@ -25,7 +25,7 @@ nav {
     padding: 8px;
 /*    margin-left: 16px;*/
     margin-top: 7px;
-    font-family: "courier";
+    font-family: arial;
     letter-spacing: 1.5px;
     animation: .75s ease-out  slideInFromLeft;
 }
@@ -211,14 +211,28 @@ nav ul li a {
 }
 
 #main-title {
-    text-align: center;
+    text-align: left;
     font-family: arial;
-    line-height: 2em;
     font-size: 36px;
     font-weight: 800;
+    color: darkgrey;
+/*
     background: -webkit-linear-gradient(#f142f4, #7cf1ec);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+*/
+}
+
+#main-title h1 {
+    font-size: 54px;
+    color: #333333;
+    margin-bottom: 0;
+}
+
+#main-title h2 {
+    font-size: 36px;
+    margin-top: 0;
+
 }
 
 
@@ -315,7 +329,7 @@ nav ul li a {
 
 .project-description h3 {
     font-size: 21px;
-    font-family: "courier";
+    font-family: arial;
     letter-spacing: 1.5px;
     text-transform: uppercase;
     font-weight: 700;
@@ -330,6 +344,7 @@ nav ul li a {
 #mega {
     background-color: #363636;
 }
+
 
 #jscalc {
     background-color: #000;
@@ -360,7 +375,7 @@ nav ul li a {
 }
 
 #mega .project-description h4{
-    color: #d6d6d6;
+    color: #FFF;
 }
 
     .contact-header {
@@ -371,7 +386,7 @@ nav ul li a {
     }
 
     .contact-me {
-        font-family: "courier";
+        font-family: arial;
         margin-top: 3em;
         margin-bottom: 3em;
         display: grid;
@@ -422,6 +437,7 @@ nav ul li a {
         cursor: pointer;
         transition: all 200ms ease-in-out;
         letter-spacing: 2px;
+        border-radius: 9px;
     }
     
     .contact-2 {
@@ -812,7 +828,7 @@ animation-delay: 1.6s;
     }
     
     .contact-me {
-        font-family: "courier";
+        font-family: arial;
         margin-top: 3em;
         margin-bottom: 3em;
         display: grid;
