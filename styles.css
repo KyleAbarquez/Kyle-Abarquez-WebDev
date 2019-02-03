@@ -34,9 +34,15 @@ nav {
     color: #000;
     text-transform: uppercase;
     font-weight: 700;
-    font-size: 18px;
+    font-size: 24px;
     text-decoration: none;
+    animation: all .2s ease;
 }
+
+.logo a i {
+    animation: all 3s ease;
+}
+
 
 nav ul {
     float: right;
@@ -49,8 +55,8 @@ nav ul li {
 }
 
 nav ul li a:hover,
-.logo a:hover{
-    transform: scale(1.1);
+.logo a i:hover{
+    transform: scale(1.5);
 }
 
 nav ul li:not(:first-child) {
