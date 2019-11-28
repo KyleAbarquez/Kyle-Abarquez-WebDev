@@ -32,7 +32,7 @@ nav {
 
 .logo a {
     color: #000;
-    text-transform: uppercase;
+/*    text-transform: uppercase;*/
     font-weight: 700;
     font-size: 24px;
     text-decoration: none;
@@ -71,7 +71,7 @@ nav ul li a {
     display: inline-block;
     outline: none;
     color: #000;
-    text-transform: uppercase;
+/*    text-transform: uppercase;*/
     text-decoration: none;
     font-size: 14px;
     letter-spacing: 1.2px;
@@ -271,7 +271,7 @@ nav ul li a {
     width: 100%;
     margin-bottom: 1em;
     border-radius: 100%;
-    max-width: 400px;
+    max-width: 300px;
     align-self: center;
 }
 
@@ -281,6 +281,8 @@ nav ul li a {
     line-height: 24px;
     display: flex;
     flex-direction: column;
+    margin-top: 3em;
+    margin-bottom: 2em;
 }
 
 .p2 {
@@ -293,9 +295,8 @@ nav ul li a {
 
 .projects {
     margin-top: 3em;
+    margin-bottom: -4em;;
 }
-
-
 
 .p-section-title {
     font-family: "Helvetica";
@@ -313,12 +314,14 @@ nav ul li a {
     padding: 1em;
     margin-top: 1em;
     transition: all .2s ease;
+    border-radius: 20px;
 }
 
 .project-card:first-child {
 }
 
-.project-card:hover {
+.project-card:hover,
+#visit_site:hover{
     transform: scale(1.03);
     cursor: pointer;
 }
@@ -341,10 +344,18 @@ nav ul li a {
     font-size: 21px;
     font-family: arial;
     letter-spacing: 1.5px;
-    text-transform: uppercase;
+/*    text-transform: uppercase;*/
     font-weight: 700;
     font-size: 18px;
     text-decoration: none;
+}
+
+#kodomo {
+    background-color: #D6F6FF;
+}
+
+#east {
+    background-color: #ADADAD;
 }
 
 #ikea {
@@ -611,7 +622,7 @@ animation-delay: 1.6s;
 }
 
 .cs-wrap-narrow {
-    max-width: 600px;
+    max-width: 800px;
 }
 
 .cs-title {
@@ -625,16 +636,30 @@ animation-delay: 1.6s;
 }
 
 .cs-wrap h4 {
-    font-family: "courier";
+    font-family: "Helvetica";
     font-size: 20px;
     font-weight: 100;
     margin: 0;
     color: #999;
 }
 
+#eastendpics img {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin: 2em;
+}
+
+#visit_site {
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2);
+    transition: all 200ms ease-in-out;
+}
+
+#eastendpics {
+    margin-bottom: 3em;
+}
 
 .display-img {
     width: 100%;
+    border-radius: 20px;
 }
 
 .cs-section-title {
@@ -647,10 +672,18 @@ animation-delay: 1.6s;
     font-family: "Helvetica";
     font-weight: 300;
     line-height: 22px;
+    color: #363636;
 }
 
 .cs-text-block span {
     font-weight: 800;
+}
+
+#img-wrap-pad {
+    padding: 2em 2em;
+    display: grid;
+    grid-gap: 1em;
+    grid-template-columns: 50% 50%;
 }
 
 .quote {
@@ -706,9 +739,10 @@ animation-delay: 1.6s;
     align-items: center;
     height: 100px;
     font-family: "Helvetica";
-    background: #000;
+    background: #A7A7A7;
     color: #fff;
     letter-spacing: 1px;
+    border-radius: 20px;
 }
 
 .subsection-title {
@@ -748,7 +782,7 @@ animation-delay: 1.6s;
         align-items: center;
         justify-content: center;;
         width: 100%;
-        margin-top: 1em;
+        margin-top: 3em;
         flex-direction: row;
     }
     
@@ -765,6 +799,8 @@ animation-delay: 1.6s;
 }
 
 @media (min-width: 850px) {
+    
+    
     
     #dd .project-img{
         margin-top: 0em;
@@ -811,7 +847,7 @@ animation-delay: 1.6s;
     
     .p-section-title {
         margin-bottom: -22px;
-        font-size: 48px;
+        font-size: 58px;
     }
     
     .projects {
