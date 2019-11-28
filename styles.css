@@ -645,7 +645,7 @@ animation-delay: 1.6s;
 
 #eastendpics img {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    margin: 2em;
+    margin-top: 1.5em;
 }
 
 #visit_site {
