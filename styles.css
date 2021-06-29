@@ -134,7 +134,7 @@ nav ul li a {
         color: #000;
         font-size: 14px;
         font-weight: 600;
-        letter-spacing: 1.2px;
+        letter-spacing: 1.5px;
         transform: translateX(-20px);
         transition: all 0.2s ease;
     }
@@ -221,7 +221,7 @@ nav ul li a {
     font-family: arial;
     font-size: 36px;
     font-weight: 800;
-    color: blue;
+    color:darkgrey;
 /*
     background: -webkit-linear-gradient(#f142f4, #7cf1ec);
   -webkit-background-clip: text;
@@ -231,14 +231,14 @@ nav ul li a {
 
 #main-title h1 {
     font-size: 54px;
-    color: #333333;
+    color: rgb(40, 40, 40);
     margin-bottom: 0;
 }
 
 #main-title h2 {
     font-size: 36px;
     margin-top: 0;
-
+    color: rgb(40, 40, 40);
 }
 
 
@@ -303,8 +303,9 @@ nav ul li a {
     font-weight: bold;
     font-size: 30px;
     padding: 0;
+    padding-bottom: 16px;
     margin: 0;
-    color: #ddd;
+    color: darkgrey;
     margin-bottom: -16px;
 }
 
@@ -315,6 +316,7 @@ nav ul li a {
     margin-top: 1em;
     transition: all .2s ease;
     border-radius: 20px;
+    color: rgb(80, 80, 80);
 }
 
 .project-card:first-child {
@@ -328,7 +330,7 @@ nav ul li a {
 
 .project-description h4 {
     font-weight: 300;
-    line-height: 24px;
+    line-height: 22px;
 }
 
 .project-img {
@@ -343,7 +345,7 @@ nav ul li a {
 .project-description h3 {
     font-size: 21px;
     font-family: arial;
-    letter-spacing: 1.5px;
+    letter-spacing: 1.2px;
 /*    text-transform: uppercase;*/
     font-weight: 700;
     font-size: 18px;
@@ -354,10 +356,6 @@ nav ul li a {
     background-color: #D6F6FF;
 }
 
-#east {
-    background-color: #ADADAD;
-}
-
 #ikea {
     background-color: #e0e0e0;
 }
@@ -366,21 +364,9 @@ nav ul li a {
     background-color: #363636;
 }
 
-
 #jscalc {
     background-color: #000;
     color: #FFF;
-}
-
-#c4 {
-    background-color: #303853;
-    color: #FFF;
-}
-
-#dd {
-    background-color: #afafaf;
-    color: #fff;
-    min-height: 500px;
 }
 
 #dd .project-img{
